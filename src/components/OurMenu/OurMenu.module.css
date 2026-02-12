@@ -1,0 +1,139 @@
+.section {
+    background-color: var(--color-cream);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.sectionTitle {
+    font-size: var(--font-size-h2);
+    color: var(--color-clay-brown);
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-family: var(--font-accent);
+    font-size: 28px;
+    color: var(--color-terracotta);
+    font-weight: 400;
+}
+
+.menuGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.menuCard {
+    position: relative;
+    background: var(--color-milk-white);
+    border-radius: var(--border-radius-lg);
+    padding: 32px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: all var(--transition-normal);
+    cursor: default;
+    overflow: hidden;
+}
+
+.menuCard:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-hover);
+}
+
+.seasonalBadge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: linear-gradient(135deg, var(--color-heritage-gold), var(--color-mustard));
+    color: var(--color-clay-brown);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.menuIcon {
+    font-size: 60px;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.menuName {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    color: var(--color-clay-brown);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.menuDescription {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--color-earthy-brown);
+    margin-bottom: 1.25rem;
+    min-height: 48px;
+}
+
+.menuPrice {
+    font-family: var(--font-heading);
+    font-size: 28px;
+    color: var(--color-terracotta);
+    font-weight: 700;
+}
+
+/* Mobile Responsive */
+@media (max-width: 767px) {
+    .sectionTitle {
+        font-size: var(--font-size-h2-mobile);
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .menuGrid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .menuCard {
+        padding: 24px 20px;
+    }
+
+    .menuIcon {
+        font-size: 48px;
+    }
+
+    .menuName {
+        font-size: 20px;
+    }
+
+    .menuDescription {
+        font-size: 14px;
+        min-height: auto;
+    }
+
+    .menuPrice {
+        font-size: 24px;
+    }
+
+    .seasonalBadge {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+}
+
+/* Tablet Responsive */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .menuGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

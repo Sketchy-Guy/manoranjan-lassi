@@ -1,0 +1,117 @@
+.section {
+    background-color: var(--color-milk-white);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.sectionTitle {
+    font-size: var(--font-size-h2);
+    color: var(--color-clay-brown);
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-family: var(--font-accent);
+    font-size: 28px;
+    color: var(--color-terracotta);
+    font-weight: 400;
+}
+
+.cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+}
+
+.card {
+    background: var(--color-cream);
+    border-radius: var(--border-radius-lg);
+    padding: 48px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: all var(--transition-normal);
+    cursor: default;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.iconWrapper {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto var(--spacing-sm);
+    background: linear-gradient(135deg, var(--color-warm-beige), var(--color-milk-white));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-soft);
+}
+
+.icon {
+    font-size: 50px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.cardTitle {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    color: var(--color-clay-brown);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.cardDescription {
+    font-size: var(--font-size-body);
+    line-height: 1.7;
+    color: var(--color-earthy-brown);
+}
+
+/* Mobile Responsive */
+@media (max-width: 1023px) {
+    .cardsGrid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+
+    .card {
+        padding: 36px;
+    }
+}
+
+@media (max-width: 767px) {
+    .sectionTitle {
+        font-size: var(--font-size-h2-mobile);
+    }
+
+    .subtitle {
+        font-size: 22px;
+    }
+
+    .card {
+        padding: 28px;
+    }
+
+    .iconWrapper {
+        width: 80px;
+        height: 80px;
+    }
+
+    .icon {
+        font-size: 40px;
+    }
+
+    .cardTitle {
+        font-size: 20px;
+    }
+
+    .cardDescription {
+        font-size: var(--font-size-body-mobile);
+    }
+}

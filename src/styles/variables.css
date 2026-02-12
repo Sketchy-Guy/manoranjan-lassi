@@ -1,0 +1,58 @@
+/* Manoranjan Lassi - Design System Variables */
+
+:root {
+  /* Color Palette */
+  --color-cream: #FFF8F0;
+  --color-terracotta: #E07B4F;
+  --color-clay-brown: #6B4423;
+  --color-mustard: #F4C430;
+  --color-earthy-brown: #8B6F47;
+  --color-milk-white: #FFFEF9;
+  --color-warm-beige: #E8DCC4;
+  --color-traditional-blue: #4A90A4;
+  --color-heritage-gold: #D4AF37;
+  --color-fresh-green: #7C9473;
+
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-accent: 'Dancing Script', cursive;
+
+  /* Font Sizes */
+  --font-size-h1: 64px;
+  --font-size-h1-mobile: 48px;
+  --font-size-h2: 48px;
+  --font-size-h2-mobile: 36px;
+  --font-size-h3: 32px;
+  --font-size-h3-mobile: 24px;
+  --font-size-body: 18px;
+  --font-size-body-mobile: 16px;
+  --font-size-small: 16px;
+  --font-size-small-mobile: 14px;
+
+  /* Shadows */
+  --shadow-soft: 0 8px 24px rgba(107, 68, 35, 0.08);
+  --shadow-elevated: 0 12px 40px rgba(107, 68, 35, 0.12);
+  --shadow-hover: 0 16px 48px rgba(107, 68, 35, 0.16);
+
+  /* Border Radius */
+  --border-radius-sm: 12px;
+  --border-radius-md: 16px;
+  --border-radius-lg: 24px;
+
+  /* Spacing */
+  --spacing-section: 120px;
+  --spacing-section-mobile: 60px;
+  --spacing-lg: 80px;
+  --spacing-md: 40px;
+  --spacing-sm: 24px;
+  --spacing-xs: 16px;
+
+  /* Container */
+  --container-max-width: 1200px;
+
+  /* Transitions */
+  --transition-fast: 200ms ease;
+  --transition-normal: 300ms ease-out;
+  --transition-slow: 400ms ease;
+}

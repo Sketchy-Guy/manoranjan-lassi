@@ -1,0 +1,106 @@
+.footer {
+    background-color: var(--color-clay-brown);
+    color: var(--color-cream);
+    padding: var(--spacing-lg) 0 var(--spacing-md);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.brandName {
+    font-family: var(--font-heading);
+    font-size: 28px;
+    color: var(--color-cream);
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    font-family: var(--font-accent);
+    font-size: 18px;
+    color: var(--color-mustard);
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-warm-beige);
+}
+
+.columnTitle {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    color: var(--color-cream);
+    margin-bottom: 0.5rem;
+}
+
+.linkList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.linkList a {
+    color: var(--color-warm-beige);
+    font-size: 15px;
+    transition: color var(--transition-fast);
+    position: relative;
+    display: inline-block;
+}
+
+.linkList a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-terracotta);
+    transition: width var(--transition-normal);
+}
+
+.linkList a:hover {
+    color: var(--color-terracotta);
+}
+
+.linkList a:hover::after {
+    width: 100%;
+}
+
+.bottomBar {
+    border-top: 1px solid rgba(255, 248, 240, 0.2);
+    padding-top: var(--spacing-sm);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: var(--color-warm-beige);
+}
+
+/* Mobile Responsive */
+@media (max-width: 1023px) {
+    .content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+
+    .bottomBar {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+}

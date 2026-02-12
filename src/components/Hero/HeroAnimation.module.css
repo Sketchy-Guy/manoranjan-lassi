@@ -1,0 +1,156 @@
+.hero {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-warm-beige) 100%);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.animationContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F5DEB3;
+}
+
+.frame {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* Glassmorphism overlay */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+            rgba(255, 248, 240, 0.1) 0%,
+            rgba(232, 220, 196, 0.15) 50%,
+            rgba(255, 248, 240, 0.1) 100%);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Ensure content appears above the glass overlay */
+.animationContainer {
+    z-index: 0;
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    color: var(--color-clay-brown);
+}
+
+.loadingSpinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid var(--color-warm-beige);
+    border-top-color: var(--color-terracotta);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.scrollIndicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-clay-brown);
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 1;
+    z-index: 20;
+}
+
+.arrow {
+    font-size: 28px;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes fadeInBounce {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 767px) {
+    .hero {
+        height: 100vh;
+        height: 100svh;
+        /* Use small viewport height for mobile browsers */
+    }
+
+    .animationContainer {
+        width: 100%;
+        height: 100%;
+    }
+
+    .frame {
+        object-fit: cover;
+        object-position: center top;
+    }
+
+    /* Reduce blur on mobile for better performance */
+    .hero::after {
+        backdrop-filter: blur(1px);
+        -webkit-backdrop-filter: blur(1px);
+    }
+
+    .scrollIndicator {
+        bottom: 20px;
+        font-size: 14px;
+    }
+
+    .arrow {
+        font-size: 24px;
+    }
+}
+
+/* Tablet Responsive */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .scrollIndicator {
+        font-size: 15px;
+    }
+}
